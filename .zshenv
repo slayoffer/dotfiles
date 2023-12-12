@@ -11,6 +11,6 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export EDITOR=nvim
 export KUBE_EDITOR=nvim
 
-export OPENAI_API_KEY=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
+export OPENAI_API_KEY=
 
 
