@@ -5,7 +5,7 @@ alias kubectx='kubectl ctx'
 alias kubens='kubectl ns'
 # alias kubectl='k3s kubectl'
 
-# ls
+# ls cmds
 alias ls='exa --icons -F -H --group-directories-first -1 -alg'
 # alias ll='ls -alF'
 # alias ll='ls -la'
@@ -16,7 +16,7 @@ alias ls='exa --icons -F -H --group-directories-first -1 -alg'
 alias vim='nvim'
 alias wtr="curl wttr.in"
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
-alias df="df -h -x squashfs -x tmpfs -x devtmpfs"
+
 alias lsmount="mount | column -t" # column view for mounted
 alias extip="curl icanhazip.com" # external ip
 alias i="sudo apt install"
@@ -24,20 +24,24 @@ alias upgrade="sudo apt update && sudo apt dist-upgrade"
 alias ram5="ps auxf | sort -nr -k 4 | head -5" # show top 5 processes which use the most RAM
 alias cpu5="ps auxf | sort -nr -k 3 | head -5" # show top 5 processes which use the most CPU
 alias wget='wget -c'
+
 # ssh key password
 alias ssheval='eval $(ssh-agent) && ssh-add ~/.ssh/rubius_rsa_key'
 alias grep='grep --color=auto'
 alias reload='source ~/.zshrc'
 alias dfh='df -h'
+alias df="df -h -x squashfs -x tmpfs -x devtmpfs"
+
 # get rid of command not found
-# alias cd..='cd ..'
+alias cd..='cd ..'
+
 # ## a quick way to get out of current directory
-# alias ..='cd ..'
-# alias ...='cd ../../../'
-# alias ....='cd ../../../../'
-# alias .....='cd ../../../../'
-# alias .4='cd ../../../../'
-# alias .5='cd ../../../../..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
 alias c='clear'
 alias h='history'
 alias cp='cp -i'
@@ -58,28 +62,39 @@ alias halt='sudo /sbin/halt'
 alias shutdown='sudo /sbin/shutdown'
 # show all PATH routes line by line
 alias path='echo -e ${PATH//:/\\n}'
+
 # This adds a progress bar and verbose output to rsync the command, which is more efficient than cp when copying a large number of files over a network
 alias rcp='rsync --progress -avz --ignore-existing'
+
 # This will show a tree-like structure of the current directory, with directories being shown first
 alias tree='tree -C --dirsfirst'
 alias process='ps aux'
 alias publicip='curl ifconfig.me'
+
 # This extracts all files in the current directory with the .gz extension
 alias extract='for i in *.gz; do tar xvf $i; done'
+
 # This shows the size of the current directory and its subdirectories in human-readable format
 alias du1='du -h -d 1'
+
 alias today='date +"%A, %B %d, %Y"'
+
 alias free='free -m -h'
 # Start calculator with math support
 alias bc='bc -l'
 # Create parent directories on demand
 alias mkdir='mkdir -pv'
+
 # install  colordiff package :)
 alias diff='colordiff'
+
 alias mount='mount |column -t'
+
 alias j='jobs -l'
-# alias ping='ping -c 5'
+
+alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
+
 ## replace mac with your actual server mac address #
 alias wakeupnas01='/usr/bin/wakeonlan 00:11:32:11:15:FC'
 # get web server headers #
