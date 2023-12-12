@@ -116,9 +116,6 @@ source $ZSH/oh-my-zsh.sh
 # The next line enables shell command completion for yc.
 # if [ -f '/home/slayo/yandex-cloud/completion.zsh.inc' ]; then source '/home/slayo/yandex-cloud/completion.zsh.inc'; fi
 
-# user PATH var path
-export PATH=$PATH:$HOME/.local/bin:/usr/local/go/bin:$HOME/.krew/bin
-
 # find out which distribution we are running on
 # LFILE="/etc/*-release"
 # MFILE="/System/Library/CoreServices/SystemVersion.plist"
@@ -171,7 +168,6 @@ export PATH=$PATH:$HOME/.local/bin:/usr/local/go/bin:$HOME/.krew/bin
 # enable aliases
 source ~/.scripts/.aliases
 # for ChatGPT
-export OPENAI_API_KEY=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
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -182,6 +178,3 @@ export OPENAI_API_KEY=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
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(starship init zsh)"
-
-export EDITOR='nvim'
-

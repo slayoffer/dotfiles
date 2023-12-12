@@ -1,6 +1,5 @@
 # Added locations to path variable
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/Projects/christianlempa/central-cli
+export PATH=$PATH:$HOME/.local/bin:/usr/local/go/bin:$HOME/.krew/bin
 
 # NVM directory
 export NVM_DIR="$HOME/.nvm"
@@ -9,9 +8,9 @@ export NVM_DIR="$HOME/.nvm"
 export VAGRANT_DEFAULT_PROVIDER="hyperv"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
-export EDITOR=vim
-export KUBE_EDITOR=vim
+export EDITOR=nvim
+export KUBE_EDITOR=nvim
 
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export OPENAI_API_KEY=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
 
 
