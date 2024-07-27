@@ -1,0 +1,2 @@
+eval `ssh-agent -s` &>/dev/null
+ssh-add ~/.ssh/ubuntu_id_rsa &>/dev/null
