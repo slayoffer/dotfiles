@@ -1,0 +1,135 @@
+# general
+alias slayo="ssh slayo"
+alias nm="nmap -sC -sV -oN nmap"
+alias cl='clear'
+
+# k8s
+alias k="kubectl"
+alias kn='kubectl config set-context --current --namespace'
+alias kubectx='kubectl ctx'
+alias kubens='kubectl ns'
+# alias kubectl='k3s kubectl'
+alias stern="kubectl stern"
+
+# clipboard
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
+# ls cmds
+alias ls='exa --icons -F -H --group-directories-first -1 -alg'
+# alias ll='ls -alF'
+# alias ll='ls -la'
+# alias ls='ls --color=auto'
+# alias l.='ls -d .* --color=auto'
+
+# common
+alias vim='vim'
+alias wtr="curl wttr.in"
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+
+alias lsmount="mount | column -t" # column view for mounted
+alias extip="curl icanhazip.com" # external ip
+alias i="sudo apt install"
+alias upgrade="sudo apt update && sudo apt dist-upgrade"
+alias ram5="ps auxf | sort -nr -k 4 | head -5" # show top 5 processes which use the most RAM
+alias cpu5="ps auxf | sort -nr -k 3 | head -5" # show top 5 processes which use the most CPU
+alias wget='wget -c'
+
+# ssh key password
+alias ssheval='eval $(ssh-agent) && ssh-add ~/.ssh/rubius_rsa_key'
+alias grep='grep --color=auto'
+alias reload='source ~/.zshrc'
+alias dfh='df -h'
+alias df="df -h -x squashfs -x tmpfs -x devtmpfs"
+
+# get rid of command not found
+alias cd..='cd ..'
+
+# ## a quick way to get out of current directory
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+alias c='clear'
+alias h='history'
+alias cp='cp -i'
+alias rm='rm -I --preserve-root'
+alias mv='mv -i'
+alias ln='ln -i'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+alias top='htop'
+alias ports='ss -tulpn | grep LISTEN'
+alias lr='ls -ltr'
+alias backup='tar -zcvf $(date +%Y%m%d).tar.gz *'
+alias update='sudo apt update && sudo apt upgrade -y'
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+# show all PATH routes line by line
+alias path='echo -e "${PATH//:/\\n}"'
+
+# This adds a progress bar and verbose output to rsync the command, which is more efficient than cp when copying a large number of files over a network
+alias rcp='rsync --progress -avz --ignore-existing'
+
+# This will show a tree-like structure of the current directory, with directories being shown first
+alias tree='tree -C --dirsfirst'
+alias process='ps aux'
+alias publicip='curl ifconfig.me'
+
+# This extracts all files in the current directory with the .gz extension
+alias extract='for i in *.gz; do tar xvf $i; done'
+
+# This shows the size of the current directory and its subdirectories in human-readable format
+alias du1='du -h -d 1'
+
+alias today='date +"%A, %B %d, %Y"'
+
+alias free='free -m -h'
+# Start calculator with math support
+alias bc='bc -l'
+# Create parent directories on demand
+alias mkdir='mkdir -pv'
+
+# install  colordiff package :)
+alias diff='colordiff'
+
+alias mount='mount |column -t'
+
+alias j='jobs -l'
+
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+
+## replace mac with your actual server mac address #
+alias wakeupnas01='/usr/bin/wakeonlan 00:11:32:11:15:FC'
+# get web server headers #
+alias header='curl -I'
+# find out if remote server supports gzip / mod_deflate or not #
+alias headerc='curl -I --compress'
+
+# This shows the current status of the git repository
+alias gst='git status' 
+# This shows the differences between the current working tree and the last commit
+alias gdiff='git diff' 
+# This commits the changes along with the commit message
+alias gc='git commit -v'
+# This shows the list of branches and highlights the current branch
+alias gb='git branch' 
+# This allows you to switch between branches
+alias gco='git checkout' 
+# This adds files to the index
+alias ga='git add'
+# This shows the difference in terms of added, deleted or modified files
+alias gd='git diff --name-status'
+# This pushes the current branch to the origin
+alias gpush='git push origin $(git rev-parse --abbrev-ref HEAD)'
+# This pulls the changes from the origin for the current branch
+alias gpull='git pull origin $(git rev-parse --abbrev-ref HEAD)'
+# This shows the git log in a more readable format with the graph, one-line format, decorations and for all branches
+alias gitlog='git log --graph --oneline --decorate --all' 
+
